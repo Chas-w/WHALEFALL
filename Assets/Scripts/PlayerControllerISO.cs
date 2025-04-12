@@ -32,6 +32,8 @@ public class PlayerControllerISO : MonoBehaviour
 
     private void Update()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+
         GatherInput();
 
         Move();

@@ -18,10 +18,17 @@ public class SwitchPOV : MonoBehaviour
     {
         
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            iso = !iso;
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
+
         ISOtoFPSwitch(iso);
     }
 
