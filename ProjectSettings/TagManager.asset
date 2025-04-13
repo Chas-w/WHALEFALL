@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Interactable
+  - Enemy
   layers:
   - Default
   - TransparentFX
