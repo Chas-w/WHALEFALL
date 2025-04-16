@@ -58,7 +58,7 @@ public class EnemyBehavior : MonoBehaviour
             {
                 hitTimer = 0;
                 isHit = false;
-                this.GetComponent<MeshRenderer>().material = normal;
+                enemyBodyMesh.material = normal;
             }
         }
     }
@@ -71,7 +71,7 @@ public class EnemyBehavior : MonoBehaviour
             currentHealth--;
 
             isHit = true;
-            this.GetComponent<MeshRenderer>().material = hit;
+            enemyBodyMesh.material = hit;
 
             if (currentHealth <= 0) { 
                 if(enemyIteration >= 3) Destroy(gameObject); else SplitSelf();
@@ -102,22 +102,22 @@ public class EnemyBehavior : MonoBehaviour
         switch(currentIteration)
         {
             case 0:
-                this.GetComponent<MeshRenderer>().material = normal;
+                enemyBodyMesh.material = normal;
                 currentHealth = 5;
                 enemyIteration = currentIteration;
                 break;
             case 1:
-                this.GetComponent<MeshRenderer>().material = first;
+                enemyBodyMesh.material = first;
                 currentHealth = 4;
                 enemyIteration = currentIteration;
                 break;
             case 2:
-                this.GetComponent<MeshRenderer>().material = second;
+                enemyBodyMesh.material = second;
                 currentHealth = 2;
                 enemyIteration = currentIteration;
                 break;
             case 3:
-                this.GetComponent<MeshRenderer>().material = third;
+                enemyBodyMesh.material = third;
                 currentHealth = 1;
                 enemyIteration = currentIteration;
                 break;

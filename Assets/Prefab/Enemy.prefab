@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd3950042a69644bcc24e4bda0e292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBody: {fileID: 3512649645972474483}
+  enemyBody: {fileID: 7559353689299274869}
   isHead: 0
 --- !u!1 &3593408065715261749
 GameObject:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd3950042a69644bcc24e4bda0e292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBody: {fileID: 0}
+  enemyBody: {fileID: 7559353689299274869}
   isHead: 1
 --- !u!1 &7559353689299274869
 GameObject:
@@ -384,11 +384,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a053fc18651d8924d81ba650904c77f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  rightEnemySpawn: {fileID: 0}
-  leftEnemySpawn: {fileID: 0}
-  first: {fileID: 0}
-  second: {fileID: 0}
-  third: {fileID: 0}
-  hit: {fileID: 0}
-  normal: {fileID: 0}
+  enemyPrefab: {fileID: 7559353689299274869}
+  rightEnemySpawn: {fileID: 4956437399400560277}
+  leftEnemySpawn: {fileID: 3036874398298402047}
+  first: {fileID: 2100000, guid: 9a17ecb2ebaf4be49bc1ca4ed10e4c71, type: 2}
+  second: {fileID: 2100000, guid: 7be57e46518128d4fb31f244c25582e3, type: 2}
+  third: {fileID: 2100000, guid: d7ea6943273732742ade507b8bbbf4c1, type: 2}
+  hit: {fileID: 2100000, guid: c852328c3fef84d4181e216f0253307b, type: 2}
+  normal: {fileID: 2100000, guid: 3796506eaa4dd1c46b07a93163aecf05, type: 2}
+  enemyBodyMesh: {fileID: 7808443911252377382}
