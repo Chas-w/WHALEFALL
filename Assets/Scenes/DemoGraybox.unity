@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 0
+    m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -2066,7 +2066,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60.000004
-    OrthographicSize: 5
+    OrthographicSize: 25
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -2092,13 +2092,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160067395}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34160146, y: 0.35556364, z: -0.14149596, w: 0.8584066}
-  m_LocalPosition: {x: -4.147659, y: 8.190875, z: -8.159035}
+  m_LocalRotation: {x: 0.10345671, y: 0.7488347, z: -0.104982734, w: 0.64615935}
+  m_LocalPosition: {x: -24.793575, y: 20.08186, z: 7.7550745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 43.4, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.914, y: 98.591, z: 1.154}
 --- !u!114 &1160067399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,12 +2111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraDistance: 10
+  CameraDistance: 31.39
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0}
+    ScreenPosition: {x: 0.11, y: 0.20399997}
     DeadZone:
-      Enabled: 0
+      Enabled: 1
       Size: {x: 0.2, y: 0.2}
     HardLimits:
       Enabled: 0
