@@ -32,6 +32,7 @@ public class EnemyBehavior : MonoBehaviour
 
     //Components
     Rigidbody body;
+    public MeshRenderer enemyBodyMesh;
 
     //Private
     int enemyIteration;

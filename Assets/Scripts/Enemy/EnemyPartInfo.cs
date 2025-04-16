@@ -13,6 +13,7 @@ public class EnemyPartInfo : MonoBehaviour
     void Start()
     {
         if (isHead) bodyPart = "head"; else bodyPart = "body";
+        enemyBody.GetComponent<EnemyBehavior>().enemyBodyMesh = this.GetComponent<MeshRenderer>();  
     }
 
     // Update is called once per frame
