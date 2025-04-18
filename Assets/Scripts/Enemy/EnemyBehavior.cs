@@ -130,16 +130,19 @@ public class EnemyBehavior : MonoBehaviour
                 break;
             case 1:
                 enemyBodyMesh.material = first;
+                normal = first;
                 currentHealth = 4;
                 enemyIteration = currentIteration;
                 break;
             case 2:
                 enemyBodyMesh.material = second;
+                normal = second;
                 currentHealth = 2;
                 enemyIteration = currentIteration;
                 break;
             case 3:
                 enemyBodyMesh.material = third;
+                normal = third;
                 currentHealth = 1;
                 enemyIteration = currentIteration;
                 break;
