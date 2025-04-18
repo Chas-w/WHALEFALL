@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyPartInfo : MonoBehaviour
 {
 
-    [SerializeField] GameObject enemyBody;
+    [SerializeField] GameObject enemyMain;
     [SerializeField] bool isHead;
 
     string bodyPart;
@@ -13,7 +13,7 @@ public class EnemyPartInfo : MonoBehaviour
     void Start()
     {
         if (isHead) bodyPart = "head"; else bodyPart = "body";
-        enemyBody.GetComponent<EnemyBehavior>().enemyBodyMesh = this.GetComponent<MeshRenderer>();  
+        //enemyBody.GetComponent<EnemyBehavior>().enemyBodyMesh = this.GetComponent<MeshRenderer>();  
     }
 
     // Update is called once per frame
@@ -24,11 +24,11 @@ public class EnemyPartInfo : MonoBehaviour
 
     public void GotShot()
     {
-        enemyBody.GetComponent<EnemyBehavior>().PartGotShot(bodyPart);
+        enemyMain.GetComponent<EnemyBehavior>().PartGotShot(bodyPart);
     }
 
     public void SetBody(GameObject body)
     {
-        enemyBody = body;
+        enemyMain = body;
     }
 }

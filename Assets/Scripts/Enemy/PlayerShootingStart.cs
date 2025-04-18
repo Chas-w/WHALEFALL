@@ -31,7 +31,7 @@ public class PlayerShootingStart : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
-            var selectionRenderer = selection.GetComponent<Renderer>();
+            //var selectionRenderer = selection.GetComponent<Renderer>();
 
             if (selection.CompareTag("Enemy"))
             {

@@ -1,22 +1,9 @@
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyBehavior : MonoBehaviour
+public class EnemyPlusBehavior : MonoBehaviour
 {
-    /*
-    [Header("Physics")]
-    public float gravity = -9.81f;
-    [SerializeField] float groundDistance = .4f;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundMask;
-
-    Vector3 velocity;
-    bool isGrounded;
-    
-    */
 
     [Header("GameObjects")]
     [SerializeField] GameObject enemyPrefab;
@@ -35,7 +22,7 @@ public class EnemyBehavior : MonoBehaviour
 
     //Components
     Rigidbody body;
-    public MeshRenderer enemyBodyMesh;
+    public SkinnedMeshRenderer enemyBodyMesh;
     NavMeshAgent agent;
 
     //Private
@@ -62,7 +49,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             hitTimer += Time.deltaTime;
 
-            if(hitTimer > 0.5f)
+            if (hitTimer > 0.5f)
             {
                 hitTimer = 0;
                 isHit = false;
@@ -73,23 +60,26 @@ public class EnemyBehavior : MonoBehaviour
         agent.SetDestination(player.transform.position);
         healthUi.GetComponent<TextMeshPro>().text = currentHealth.ToString();
     }
-    
+
 
     public void PartGotShot(string bodyPart)
     {
-        if(bodyPart == "body")
+        if (bodyPart == "body")
         {
             currentHealth--;
 
             isHit = true;
             enemyBodyMesh.material = hit;
 
-            if (currentHealth <= 0) { 
-                if(enemyIteration >= 3) Destroy(gameObject); else SplitSelf();
+            if (currentHealth <= 0)
+            {
+                if (enemyIteration >= 3) Destroy(gameObject); else SplitSelf();
             }
-        } else if(bodyPart == "head")
+        }
+        else if (bodyPart == "head")
         {
-            if(enemyIteration != 0) Destroy(this.gameObject); else
+            if (enemyIteration != 0) Destroy(this.gameObject);
+            else
             {
                 currentHealth--;
 
@@ -98,7 +88,7 @@ public class EnemyBehavior : MonoBehaviour
 
                 if (currentHealth <= 0)
                 {
-                   SplitSelf();
+                    SplitSelf();
                 }
             }
             Debug.Log("HeadShot");
@@ -121,7 +111,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     public void SpawnAsClone(int currentIteration)
     {
-        switch(currentIteration)
+        switch (currentIteration)
         {
             case 0:
                 enemyBodyMesh.material = normal;
@@ -145,21 +135,4 @@ public class EnemyBehavior : MonoBehaviour
                 break;
         }
     }
-
-
-
-    /*
-    void ApplyGravity()
-    {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); //check if grounded
-
-        if (isGrounded && velocity.y < 0) //don't fall if grounded
-        {
-            velocity.y = -2f;
-        }
-
-        body.AddForce(velocity.y gravity * Time.deltaTime, ForceMode.Force); //fall otherwise
-
-    }
-    */
 }
