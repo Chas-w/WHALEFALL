@@ -9,6 +9,7 @@ public class PlayerControllerFP : MonoBehaviour
     public float mSpeed;
     [SerializeField] Transform orientation;
     [SerializeField] CharacterController controller;
+    public bool groundMovementEnabled; 
 
     [Header("Mouse Data")]
     [SerializeField] float mouseSens;
@@ -48,19 +49,26 @@ public class PlayerControllerFP : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        GroundMovement();
-        MouseMovement(); 
+        GroundMovement(groundMovementEnabled);
+        MouseMovement();
+        ApplyGravity();
     }
 
-    void GroundMovement()
+    void GroundMovement(bool GroundMovement)
     {
-        //Get input
-        mX = Input.GetAxis("Horizontal"); 
-        mZ = Input.GetAxis("Vertical");
+        if (groundMovementEnabled)
+        {
+            //Get input
+            mX = Input.GetAxis("Horizontal");
+            mZ = Input.GetAxis("Vertical");
 
-        Vector3 move = orientation.right * mX + orientation.forward * mZ; //direction we want to move
-        controller.Move(move * mSpeed * Time.deltaTime); //move
-        //playFootsteps();
+            Vector3 move = orientation.right * mX + orientation.forward * mZ; //direction we want to move
+            controller.Move(move * mSpeed * Time.deltaTime); //move
+                                                             //playFootsteps();
+
+        }
+
+
     }
 
     void ApplyGravity()

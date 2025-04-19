@@ -20,9 +20,12 @@ public class SwitchPOV : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButton(1))
         {
-            iso = !iso;
+            iso = false;
+        } else
+        {
+            iso = true;
         }
     }
     // Update is called once per frame
@@ -56,6 +59,7 @@ public class SwitchPOV : MonoBehaviour
             //MOVEMENT CONTROLS
             playerControllerISO.enabled = false;
             playerControllerFP.enabled = true;
+            playerControllerFP.groundMovementEnabled = false; //when going to FP for the gun, groundmovement isn't enabled by default. 
 
             //don't see player
             playerVisualize.SetActive(false);
