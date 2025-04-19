@@ -14,7 +14,7 @@ public class Flock : MonoBehaviour
     void Update()
     {
         ApplyRules();
-       this.transform.Translate(speed * Time.deltaTime, 0,0);
+       this.transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
     void ApplyRules()
