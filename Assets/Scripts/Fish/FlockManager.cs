@@ -35,7 +35,6 @@ public class FlockManager: MonoBehaviour
                                                                  Random.Range(-swimLimits.z, swimLimits.z)); //fish are relative to where flock manager is
 
             allFish[i] = Instantiate(fishPrefab, pos, Quaternion.identity);
-            Debug.Log(pos);
         }
         FM = this; 
     }

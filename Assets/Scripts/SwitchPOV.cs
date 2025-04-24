@@ -1,4 +1,5 @@
 using Unity.Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SwitchPOV : MonoBehaviour
@@ -12,22 +13,33 @@ public class SwitchPOV : MonoBehaviour
     public PlayerControllerISO playerControllerISO; 
     public PlayerControllerFP playerControllerFP;
 
-    public bool iso; 
-
+    public bool iso;
+    public bool triggerFirst;
+    public bool FP; 
     void Start()
     {
         
     }
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || FP)
         {
             iso = false;
         } else
         {
             iso = true;
         }
+
+        if (triggerFirst)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                FP = !FP; 
+            }
+        }
     }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -35,6 +47,20 @@ public class SwitchPOV : MonoBehaviour
         ISOtoFPSwitch(iso);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "FP")
+        {
+            triggerFirst = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "FP")
+        {
+            triggerFirst = false;
+        }
+    }
     void ISOtoFPSwitch(bool _switch)
     {
         if (_switch) //isometric view 
@@ -63,7 +89,6 @@ public class SwitchPOV : MonoBehaviour
 
             //don't see player
             playerVisualize.SetActive(false);
-
         }
     }
 

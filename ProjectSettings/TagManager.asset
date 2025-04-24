@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Enemy
   - Ground
+  - FP
   layers:
   - Default
   - TransparentFX
