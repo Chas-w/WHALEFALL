@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 378516299}
   - component: {fileID: 378516302}
   - component: {fileID: 378516301}
+  - component: {fileID: 378516303}
   - component: {fileID: 378516300}
   m_Layer: 0
   m_Name: PuzzElements
@@ -168,7 +169,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -197,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,6 +228,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378516298}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &378516303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378516298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1001 &385359524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +318,155 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff6e7d32f3919349bea4e2b7a7765a0, type: 3}
+--- !u!1 &464824355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464824359}
+  - component: {fileID: 464824358}
+  - component: {fileID: 464824357}
+  - component: {fileID: 464824356}
+  - component: {fileID: 464824361}
+  - component: {fileID: 464824360}
+  m_Layer: 0
+  m_Name: MouseTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &464824356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &464824357
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &464824358
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &464824359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.450916, y: 6.98, z: -191.56}
+  m_LocalScale: {x: 0.17558, y: 0.17558, z: 0.17558}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &464824360
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &464824361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464824355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa24c84c52eba2544ad3b52c0a7f9685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &482242002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -496,6 +661,7 @@ GameObject:
   - component: {fileID: 554472029}
   - component: {fileID: 554472032}
   - component: {fileID: 554472031}
+  - component: {fileID: 554472033}
   - component: {fileID: 554472030}
   m_Layer: 0
   m_Name: PuzzElements
@@ -534,7 +700,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -563,7 +729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -593,6 +759,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554472028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &554472033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554472028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &661064143
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +785,7 @@ GameObject:
   - component: {fileID: 661064147}
   - component: {fileID: 661064146}
   - component: {fileID: 661064145}
+  - component: {fileID: 661064148}
   - component: {fileID: 661064144}
   m_Layer: 0
   m_Name: PUZZLEHUB
@@ -710,6 +892,18 @@ Transform:
   - {fileID: 378516299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661064148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661064143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a314374a79276248982ed9fc55f4295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &682776004
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +915,7 @@ GameObject:
   - component: {fileID: 682776005}
   - component: {fileID: 682776008}
   - component: {fileID: 682776007}
+  - component: {fileID: 682776009}
   - component: {fileID: 682776006}
   m_Layer: 0
   m_Name: PuzzElements
@@ -759,7 +954,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -788,7 +983,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -818,6 +1013,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682776004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &682776009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682776004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &716815734
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +1039,7 @@ GameObject:
   - component: {fileID: 716815735}
   - component: {fileID: 716815738}
   - component: {fileID: 716815737}
+  - component: {fileID: 716815739}
   - component: {fileID: 716815736}
   m_Layer: 0
   m_Name: PuzzElements
@@ -867,7 +1078,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -896,7 +1107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -926,6 +1137,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716815734}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &716815739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716815734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &740294545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1271,7 @@ GameObject:
   - component: {fileID: 911266974}
   - component: {fileID: 911266977}
   - component: {fileID: 911266976}
+  - component: {fileID: 911266978}
   - component: {fileID: 911266975}
   m_Layer: 0
   m_Name: PuzzElements
@@ -1083,7 +1310,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1112,7 +1339,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1142,6 +1369,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911266973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &911266978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911266973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1001 &953640514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1228,6 +1470,7 @@ GameObject:
   - component: {fileID: 1044045508}
   - component: {fileID: 1044045511}
   - component: {fileID: 1044045510}
+  - component: {fileID: 1044045512}
   - component: {fileID: 1044045509}
   m_Layer: 0
   m_Name: PuzzElements
@@ -1266,7 +1509,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1295,7 +1538,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1325,6 +1568,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044045507}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1044045512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044045507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &1109238308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1594,7 @@ GameObject:
   - component: {fileID: 1109238309}
   - component: {fileID: 1109238312}
   - component: {fileID: 1109238311}
+  - component: {fileID: 1109238313}
   - component: {fileID: 1109238310}
   m_Layer: 0
   m_Name: PuzzElements
@@ -1374,7 +1633,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1403,7 +1662,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1433,6 +1692,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109238308}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1109238313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109238308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &1177828683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +2163,7 @@ GameObject:
   - component: {fileID: 1438924718}
   - component: {fileID: 1438924721}
   - component: {fileID: 1438924720}
+  - component: {fileID: 1438924722}
   - component: {fileID: 1438924719}
   m_Layer: 0
   m_Name: PuzzElements
@@ -1927,7 +2202,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1956,7 +2231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1986,6 +2261,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438924717}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1438924722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438924717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &1877105828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2287,7 @@ GameObject:
   - component: {fileID: 1877105829}
   - component: {fileID: 1877105832}
   - component: {fileID: 1877105831}
+  - component: {fileID: 1877105833}
   - component: {fileID: 1877105830}
   m_Layer: 0
   m_Name: PuzzElements
@@ -2035,7 +2326,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2064,7 +2355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eeb64ed7e87cfd4eb691662ea494243, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2094,6 +2385,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877105828}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1877105833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877105828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a299377f5e1a17d43957b0645cf50a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTracker: {fileID: 464824355}
+  correctPosition: 0
+  currentPosition: 0
 --- !u!1 &2045647139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,3 +2552,4 @@ SceneRoots:
   - {fileID: 953640514}
   - {fileID: 385359524}
   - {fileID: 501585810}
+  - {fileID: 464824359}
