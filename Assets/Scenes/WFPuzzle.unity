@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 378516303}
   - component: {fileID: 378516300}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 3 C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
+  - {fileID: 2100000, guid: d6f7b9874156ebd46b6798b992be6c4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,8 +241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 2100000, guid: 38882060fe10ec44c8254178940051e0, type: 2}
   correctPosition: 0
-  currentPosition: 0
+  currentPosition: 1
+  startPosition: 2
 --- !u!1001 &385359524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -664,7 +666,7 @@ GameObject:
   - component: {fileID: 554472033}
   - component: {fileID: 554472030}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 3 A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,8 +774,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 2100000, guid: 61db3a4e45df0ce4ea3a09a361a725b3, type: 2}
   correctPosition: 0
   currentPosition: 0
+  startPosition: 0
 --- !u!1 &661064143
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +908,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a314374a79276248982ed9fc55f4295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPieces:
+  - {fileID: 378516298}
+  - {fileID: 682776004}
+  - {fileID: 554472028}
+  - {fileID: 1877105828}
+  - {fileID: 1438924717}
+  - {fileID: 1109238308}
+  - {fileID: 911266973}
+  allPieces:
+  - {fileID: 911266973}
+  - {fileID: 1109238308}
+  - {fileID: 716815734}
+  - {fileID: 1877105828}
+  - {fileID: 1438924717}
+  - {fileID: 1044045507}
+  - {fileID: 554472028}
+  - {fileID: 682776004}
+  - {fileID: 378516298}
 --- !u!1 &682776004
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +940,7 @@ GameObject:
   - component: {fileID: 682776009}
   - component: {fileID: 682776006}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 3 B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,7 +1005,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
+  - {fileID: 2100000, guid: d6f7b9874156ebd46b6798b992be6c4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1026,8 +1048,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 2100000, guid: 38882060fe10ec44c8254178940051e0, type: 2}
   correctPosition: 0
   currentPosition: 0
+  startPosition: 3
 --- !u!1 &716815734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1066,7 @@ GameObject:
   - component: {fileID: 716815739}
   - component: {fileID: 716815736}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 1 C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
+  - {fileID: 2100000, guid: d6f7b9874156ebd46b6798b992be6c4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1150,8 +1174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 0}
   correctPosition: 0
   currentPosition: 0
+  startPosition: 0
 --- !u!1 &740294545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1300,7 @@ GameObject:
   - component: {fileID: 911266978}
   - component: {fileID: 911266975}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 1 A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,7 +1365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
+  - {fileID: 2100000, guid: d6f7b9874156ebd46b6798b992be6c4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1382,8 +1408,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 2100000, guid: 38882060fe10ec44c8254178940051e0, type: 2}
   correctPosition: 0
   currentPosition: 0
+  startPosition: 1
 --- !u!1001 &953640514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1473,7 +1501,7 @@ GameObject:
   - component: {fileID: 1044045512}
   - component: {fileID: 1044045509}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 2 C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1566,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d1b1115b9278f64cbaa1dbbf518a073, type: 2}
+  - {fileID: 2100000, guid: 3ab5305febcdbf24b994d5f79f751234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1581,8 +1609,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
+  filledMaterial: {fileID: 0}
   correctPosition: 0
   currentPosition: 0
+  startPosition: 0
 --- !u!1 &1109238308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1627,7 @@ GameObject:
   - component: {fileID: 1109238313}
   - component: {fileID: 1109238310}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 1 B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1705,8 +1735,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
-  correctPosition: 0
+  filledMaterial: {fileID: 2100000, guid: 61db3a4e45df0ce4ea3a09a361a725b3, type: 2}
+  correctPosition: 2
   currentPosition: 0
+  startPosition: 0
 --- !u!1 &1177828683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2198,7 @@ GameObject:
   - component: {fileID: 1438924722}
   - component: {fileID: 1438924719}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 2 B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2274,8 +2306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
-  correctPosition: 0
+  filledMaterial: {fileID: 2100000, guid: 61db3a4e45df0ce4ea3a09a361a725b3, type: 2}
+  correctPosition: 3
   currentPosition: 0
+  startPosition: 2
 --- !u!1 &1877105828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +2324,7 @@ GameObject:
   - component: {fileID: 1877105833}
   - component: {fileID: 1877105830}
   m_Layer: 0
-  m_Name: PuzzElements
+  m_Name: 2 A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2398,8 +2432,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTracker: {fileID: 464824355}
-  correctPosition: 0
+  filledMaterial: {fileID: 2100000, guid: 61db3a4e45df0ce4ea3a09a361a725b3, type: 2}
+  correctPosition: 1
   currentPosition: 0
+  startPosition: 0
 --- !u!1 &2045647139
 GameObject:
   m_ObjectHideFlags: 0
