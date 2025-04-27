@@ -6,6 +6,8 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField] GameObject[] correctPieces;
     [SerializeField] GameObject[] allPieces;
+    [SerializeField] GameObject outPiece;
+    [SerializeField] Material outPieceMaterial;
 
     int filledPiece;
 
@@ -43,6 +45,9 @@ public class PuzzleManager : MonoBehaviour
         {
             filledPiece++;
             Invoke("FillPieces", 0.5f);
+        } else
+        {
+            Invoke("EndPuzzle", 0.5f);
         }
     }
 
@@ -52,6 +57,11 @@ public class PuzzleManager : MonoBehaviour
         {
             allPieces[i].GetComponent<PuzzleElementBehavior>().DeactivateSelf();
         }
+    }
+
+    void EndPuzzle()
+    {
+        outPiece.GetComponent<MeshRenderer>().material = outPieceMaterial;
     }
 
 
