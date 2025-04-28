@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3036874398298402047}
   - component: {fileID: 5405450765960607120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 455194164042265650}
   - component: {fileID: 8726409449574669488}
   - component: {fileID: 7041916307208774131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 1162666705875234111}
   - component: {fileID: 4294669431925033668}
   - component: {fileID: 1819776911247771511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2371739198797062340}
   - component: {fileID: 646803238650413235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 5723253124330385456}
   - component: {fileID: 8231919583441546131}
   - component: {fileID: 4176123355542237166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 593288875104014299}
   - component: {fileID: 2925493646177963098}
   - component: {fileID: 8339701787129803245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arms
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 5825827066778252182}
   - component: {fileID: 7255877339490281178}
   - component: {fileID: 2390137027426127750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthRemaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,8 +874,16 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f435743155ab1944d86658e9f233bb40, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f435743155ab1944d86658e9f233bb40, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992597216454771178, guid: f435743155ab1944d86658e9f233bb40, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
