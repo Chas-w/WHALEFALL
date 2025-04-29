@@ -6,6 +6,7 @@ public class PuzzleElementBehavior : MonoBehaviour
 
     [SerializeField] GameObject mouseTracker;
     [SerializeField] Material filledMaterial;
+    [SerializeField] bool isStartEnd;
 
     public int correctPosition;
     public int currentPosition;
@@ -16,7 +17,7 @@ public class PuzzleElementBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        canTurn = true;
+        if(!isStartEnd) canTurn = true;
         currentPosition = startPosition;
         this.transform.Rotate(0, 0, -90 * startPosition);
     }

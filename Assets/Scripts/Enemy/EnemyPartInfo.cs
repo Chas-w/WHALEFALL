@@ -24,7 +24,7 @@ public class EnemyPartInfo : MonoBehaviour
 
     public void GotShot()
     {
-        enemyMain.GetComponent<EnemyPlusBehavior>().PartGotShot(bodyPart);
+        enemyMain.GetComponent<EnemyBehavior>().PartGotShot(bodyPart);
     }
 
     public void SetBody(GameObject body)
