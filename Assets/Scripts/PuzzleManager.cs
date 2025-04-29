@@ -25,12 +25,14 @@ public class PuzzleManager : MonoBehaviour
 
         player.SetActive(false);
 
+        /*
         int columnNum = 0;
         for(int i = 0; i < allPieces.Length; i++)
         {
             gridPieces[columnNum, i % 3] = allPieces[i];
             if (i == 2 || i == 4) columnNum++;
         }
+        */
     }
 
     // Update is called once per frame
@@ -52,6 +54,7 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
+        /*
         if(Input.GetKeyDown(KeyCode.S))
         {
             pieceHighlightY += 1;
@@ -75,6 +78,7 @@ public class PuzzleManager : MonoBehaviour
         }
 
         pieceHighlight.transform.position = gridPieces[pieceHighlightX, pieceHighlightY].transform.position;
+        */
 
     }
 
