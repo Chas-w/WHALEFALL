@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerShootingStart : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
+    [SerializeField] SwitchPOV switchPOV;
 
     private Transform _selection;
     private bool isLooking;
@@ -18,8 +19,8 @@ public class PlayerShootingStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<SwitchPOV>().FP)
-        {
+        //if (switchPOV.FP)
+        //{
             if (_selection != null)
             {
                 _selection = null;
@@ -65,7 +66,7 @@ public class PlayerShootingStart : MonoBehaviour
 
             }
 
-        }
+        //}
     }
 
 

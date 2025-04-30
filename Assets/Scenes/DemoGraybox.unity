@@ -1932,7 +1932,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8932fca42d1bff14ab0dec1dd7aa7883, type: 2}
+  - {fileID: 2100000, guid: a932c5d1aebc6ba4eb27ce3550ae77c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1970,12 +1970,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249777535}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7942923, z: -0, w: 0.60753584}
-  m_LocalPosition: {x: -37.72, y: 5.5, z: -190.48}
-  m_LocalScale: {x: 2.7759843, y: 5.7324, z: 0.26603353}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.4, y: 0, z: 0.4}
+  m_LocalScale: {x: 39.850742, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 426995484}
   m_LocalEulerAnglesHint: {x: 0, y: 105.177, z: 0}
 --- !u!1 &252412245
 GameObject:
@@ -2634,7 +2634,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 21.982569
+  m_FocalLength: 4.6193795
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -2649,13 +2649,13 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 120
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 31
+    m_Bits: 95
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 69926c104d559f4459e1f2a179a78064, type: 2}
   m_TargetDisplay: 0
@@ -2676,7 +2676,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9996374, z: -0.026926588, w: 0}
-  m_LocalPosition: {x: -40.873886, y: 6.187888, z: -180.786}
+  m_LocalPosition: {x: -41.14331, y: 5.7235637, z: -189.4061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3341,6 +3341,93 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &426995483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426995484}
+  - component: {fileID: 426995486}
+  - component: {fileID: 426995485}
+  m_Layer: 6
+  m_Name: PuzzleDoorHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &426995484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426995483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.00759212, z: -0, w: 0.9999712}
+  m_LocalPosition: {x: -86.98454, y: 2.6756392, z: 21.569382}
+  m_LocalScale: {x: 0.14845796, y: 5.7324, z: 0.26603353}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 249777539}
+  m_Father: {fileID: 1100626776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.87, z: 0}
+--- !u!23 &426995485
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426995483}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a932c5d1aebc6ba4eb27ce3550ae77c2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &426995486
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426995483}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &443780381
 GameObject:
   m_ObjectHideFlags: 0
@@ -5973,7 +6060,7 @@ Transform:
   m_GameObject: {fileID: 937216788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9996374, z: -0.026926588, w: 0}
-  m_LocalPosition: {x: 0.021999639, y: 0.12000002, z: 15.649996}
+  m_LocalPosition: {x: -0.025, y: 0.039, z: 3.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6003,12 +6090,12 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60
+    FieldOfView: 120
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
-    ModeOverride: 0
+    ModeOverride: 2
     PhysicalProperties:
       GateFit: 2
       SensorSize: {x: 21.946, y: 16.002}
@@ -6892,6 +6979,8 @@ Transform:
   - {fileID: 1303862342}
   - {fileID: 528184838}
   - {fileID: 123475447}
+  - {fileID: 426995484}
+  - {fileID: 1997285011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1104868632
@@ -7847,6 +7936,9 @@ MonoBehaviour:
   player: {fileID: 2023585140}
   puzzleCamera: {fileID: 937216790}
   PuzzleStarter: {fileID: 498840813}
+  PuzzleDoor: {fileID: 426995483}
+  PuzzleDoorFinalRotation: {fileID: 1997285011}
+  isoCamera: {fileID: 1160067397}
 --- !u!23 &1303862340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7870,7 +7962,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd976a8ec0493b34f8369eb8b75440f3, type: 2}
+  - {fileID: 2100000, guid: 823b613bd23b62e489b3a4a48df733aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11448,6 +11540,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
+--- !u!1 &1997285010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997285011}
+  m_Layer: 0
+  m_Name: PuzzleDoorFinalRotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997285011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997285010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9155223, z: -0, w: 0.4022674}
+  m_LocalPosition: {x: -86.98454, y: 2.6756392, z: 21.569382}
+  m_LocalScale: {x: 0.14845796, y: 5.7324, z: 0.26603353}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100626776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023585140
 GameObject:
   m_ObjectHideFlags: 0
@@ -12698,4 +12821,3 @@ SceneRoots:
   - {fileID: 1100626776}
   - {fileID: 629211373}
   - {fileID: 666168185}
-  - {fileID: 249777539}

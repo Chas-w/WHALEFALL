@@ -2241,6 +2241,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  switchPOV: {fileID: 574597540}
 --- !u!1 &2082101380
 GameObject:
   m_ObjectHideFlags: 0

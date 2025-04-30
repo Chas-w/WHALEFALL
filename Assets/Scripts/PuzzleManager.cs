@@ -13,11 +13,15 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] CinemachineCamera puzzleCamera;
     [SerializeField] GameObject PuzzleStarter;
+    [SerializeField] GameObject PuzzleDoor;
+    [SerializeField] Transform PuzzleDoorFinalRotation;
+    [SerializeField] CinemachineCamera isoCamera;
 
     int filledPiece;
     int pieceHighlightX;
     int pieceHighlightY;
     GameObject[,] gridPieces = new GameObject[3,3];
+    bool doorIsOpen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +42,9 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (PuzzleDoor.transform.rotation != PuzzleDoorFinalRotation.rotation) PuzzleDoor.transform.rotation = Quaternion.Lerp(PuzzleDoor.transform.rotation, PuzzleDoorFinalRotation.rotation, 2 * Time.deltaTime); 
+
 
         if (Input.GetMouseButtonUp(0)) {
 
@@ -109,6 +116,7 @@ public class PuzzleManager : MonoBehaviour
         puzzleCamera.Priority = 0;
         PuzzleStarter.SetActive(false);
         player.SetActive(true);
+        isoCamera.Priority = 0;
     }
 
 

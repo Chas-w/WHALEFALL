@@ -7,6 +7,8 @@ public class ToPuzzle : MonoBehaviour
     [SerializeField] GameObject PuzzleManager;
     [SerializeField] CinemachineCamera puzzleCamera;
 
+    bool hasStarted;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,8 +23,12 @@ public class ToPuzzle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PuzzleManager.SetActive(true);
-        puzzleCamera.Priority = 10;
+        if (!hasStarted) {
+            PuzzleManager.SetActive(true);
+            puzzleCamera.Priority = 10;
+            hasStarted = true;
+        }
+        
     }
 
 
