@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PixelFX
-  m_Shader: {fileID: -6465566751694194690, guid: 1af2d8ec1f3d6e44598c121bef58e52b,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 1af2d8ec1f3d6e44598c121bef58e52b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -38,6 +37,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _PixelCount: 600
+    - _PixelCount: 590
     m_Colors: []
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

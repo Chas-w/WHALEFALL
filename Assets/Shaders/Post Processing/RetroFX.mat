@@ -37,12 +37,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _B: 0
-    - _ColorResolution: 5.5
-    - _DitherSpread: 0.1
-    - _G: -0.06
+    - _B: 0.03
+    - _ColorResolution: 6
+    - _DitherSpread: 0.08
+    - _G: 0.01
     - _R: 0
-    - _Saturation: 0
+    - _Saturation: 1
     m_Colors:
     - _RGB: {r: 0, g: 0, b: 0, a: 0}
     - _RGB_Balance: {r: 0, g: 0, b: 0, a: 0}
