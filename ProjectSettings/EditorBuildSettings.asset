@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PovSwitcher.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DoorScene.unity
     guid: 5a85442149b1b4143ac3e01f8cc574da
+  - enabled: 1
+    path: Assets/Scenes/DemoGraybox.unity
+    guid: 194eace82d8aa2a48b00ead7d72ec47e
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 3132fc246197356488ebe3b530f9b928
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
