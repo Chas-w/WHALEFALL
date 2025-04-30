@@ -56,7 +56,7 @@ public class ElevatorManager : MonoBehaviour
 
             speedRepresentation.GetComponent<TextMeshProUGUI>().text = rb.linearVelocity.y.ToString();
 
-            if(rb.linearVelocity.y > 10) player.GetComponent<PlayerHealth>().DestroySelf();
+            if(rb.linearVelocity.y > 15) player.GetComponent<PlayerHealth>().DestroySelf();
             if (this.transform.position.y > 28) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
