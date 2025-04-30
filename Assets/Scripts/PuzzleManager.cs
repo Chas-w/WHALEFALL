@@ -16,6 +16,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] GameObject PuzzleDoor;
     [SerializeField] Transform PuzzleDoorFinalRotation;
     [SerializeField] CinemachineCamera isoCamera;
+    [SerializeField] GameObject gatePuzzle;
 
     int filledPiece;
     int pieceHighlightX;
@@ -117,6 +118,7 @@ public class PuzzleManager : MonoBehaviour
         PuzzleStarter.SetActive(false);
         player.SetActive(true);
         isoCamera.Priority = 0;
+        gatePuzzle.GetComponent<GatePuzzle>().PreparePuzzle();
     }
 
 

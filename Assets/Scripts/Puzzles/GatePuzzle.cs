@@ -5,6 +5,8 @@ public class GatePuzzle : MonoBehaviour
 
     [SerializeField] GameObject[] lockArray;
 
+    [SerializeField] GameObject enemySpawner;
+
     [SerializeField] GameObject leftGate;
     [SerializeField] GameObject rightGate;
     [SerializeField] GameObject leftGateFinal;
@@ -16,6 +18,11 @@ public class GatePuzzle : MonoBehaviour
     void Start()
     {
         isLocked = true;
+
+        for (int i = 0; i < lockArray.Length; i++)
+        {
+            lockArray[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +35,11 @@ public class GatePuzzle : MonoBehaviour
             for (int i = 0; i < lockArray.Length; i++) {
                 if (lockArray[i].GetComponent<LockBehavior>().isLocked == false) unlockCount++;
             }
-            if(unlockCount >= lockArray.Length) isLocked = false;
+            if (unlockCount >= lockArray.Length) {
+                isLocked = false;
+                enemySpawner.GetComponent<EnemySpawner>().SpawnEnemy();
+            }
+            
 
         }
 
@@ -46,5 +57,13 @@ public class GatePuzzle : MonoBehaviour
         isLocked = false;
         this.GetComponent<MeshRenderer>().enabled = false;
         this.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void PreparePuzzle()
+    {
+        for (int i = 0; i < lockArray.Length; i++)
+        {
+            lockArray[i].SetActive(true);
+        }
     }
 }
