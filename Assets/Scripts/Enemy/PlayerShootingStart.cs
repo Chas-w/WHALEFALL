@@ -35,7 +35,7 @@ public class PlayerShootingStart : MonoBehaviour
 
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 10, layerMask))
+            if (Physics.Raycast(ray, out hit, 20, layerMask))
             {
                 var selection = hit.transform;
                 //var selectionRenderer = selection.GetComponent<Renderer>();

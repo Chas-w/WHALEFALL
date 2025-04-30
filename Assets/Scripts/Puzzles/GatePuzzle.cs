@@ -4,12 +4,18 @@ public class GatePuzzle : MonoBehaviour
 {
 
     [SerializeField] GameObject[] lockArray;
+
+    [SerializeField] GameObject leftGate;
+    [SerializeField] GameObject rightGate;
+    [SerializeField] GameObject leftGateFinal;
+    [SerializeField] GameObject rightGateFinal;
+
     bool isLocked;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        isLocked = true;
     }
 
     // Update is called once per frame
@@ -22,8 +28,16 @@ public class GatePuzzle : MonoBehaviour
             for (int i = 0; i < lockArray.Length; i++) {
                 if (lockArray[i].GetComponent<LockBehavior>().isLocked == false) unlockCount++;
             }
-            if(unlockCount >= lockArray.Length) UnlockSelf();
+            if(unlockCount >= lockArray.Length) isLocked = false;
 
+        }
+
+        if(!isLocked)
+        {
+            if (leftGate.transform.rotation != leftGateFinal.transform.rotation) {
+                leftGate.transform.rotation = Quaternion.Lerp(leftGate.transform.rotation, leftGateFinal.transform.rotation, 2 * Time.deltaTime);
+                rightGate.transform.rotation = Quaternion.Lerp(rightGate.transform.rotation, rightGateFinal.transform.rotation, 2 * Time.deltaTime);
+            } 
         }
     }
 
